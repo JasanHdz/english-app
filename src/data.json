@@ -1,0 +1,26 @@
+{
+    "simplePresent": {
+        "questions": [
+            {
+                "interrogative": "Does she drink soda at home every day?",
+                "affirmative": "she drinks soda at home every day",
+                "negative": "she doesn't drink soda at home every day"
+            },
+            {
+                "interrogative": "Does he drink soda at home every day?",
+                "affirmative": "he drinks soda at home every day",
+                "negative": "he doesn't drink soda at home every day"
+            },
+            {
+                "interrogative": "Does it drink soda at home every day?",
+                "affirmative": "it drinks soda at home every day",
+                "negative": "it doesn't drink soda at home every day"
+            },
+            {
+                "interrogative": "Do I drink soda at home every day?",
+                "affirmative": "you drink soda at home every day",
+                "negative": "you don't drink soda at home every day"
+            }
+        ]
+    }
+}
