@@ -1,5 +1,13 @@
+export const LearnPaths = {
+    HOME: '/learn',
+    TOPIC: '/learn/:topic',
+}
+
 export const PracticePaths = {
-    PRONOUNS: '/skill/pronouns/practice',
-    SIMPLE_PRESENT: '/skill/simplePresent/practice',
-    FUTURE_SIMPLE: '/skill/simpleFuture/practice'
+    PRACTICE: '/practice',
+    SIMPLE_PRESENT: '/practice/simple-present',
+}
+
+export const CardsPaths = {
+    CARDS: '/cards'
 }

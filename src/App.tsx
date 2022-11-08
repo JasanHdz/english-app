@@ -1,21 +1,20 @@
 import { Suspense } from "react"
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom"
 import { routes } from '@/routes'
 import { IRoute } from './interfaces/routes';
-import { Button } from "./components/UI";
+import { NotFound } from "./pages/NotFound";
+import { LearnPaths } from './routes/paths/index';
+import { Layout } from "./components/Layout/Layout";
 
 function HocAppRoute(route: IRoute) {
   if (route.isUnderConstruction || route.component === null) {
-    return (
-      <div className="flex justify-center items-center flex-col gap-5 min-h-screen">
-        <p>Pagina en construccion 🛠️</p>
-        <Link to='/'>
-          <Button variant="secondary" className="w-52">Go back</Button>
-        </Link>
-      </div>
-    )
+    return <NotFound />
   }
-  return <route.component />
+  return (
+    <Layout type={route.layout ?? 'APP'}>
+      <route.component />
+    </Layout>
+  )
 }
 
 function App() {
@@ -23,6 +22,7 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<p>Loading...</p>}>
         <Routes>
+          <Route path='/' element={<Navigate to={LearnPaths.HOME} />} />
           {routes.map((route) => (
             <Route key={route.path} path={route.path} element={HocAppRoute(route)} />
           ))}

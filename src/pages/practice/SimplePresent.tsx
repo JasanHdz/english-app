@@ -4,11 +4,11 @@ import { useTransition, animated } from "react-spring";
 import Wrapper from "@/components/Layout/Wrapper"
 import { Button, ProgressBar, TextArea } from "@/components/UI"
 import { applySentenceColor } from "@/utils/applySentenceColor"
-import { QuestionsContext } from '../context/questions/QuestionsContext';
+import { QuestionsContext } from '../../context/questions/QuestionsContext';
 import { useInputValue } from '@/hooks/useInputValue';
 
 function SimplePresent() {
-    const { currentQuestion, questionType, startGame, responseType, checkQuestion, victories, percentage, status, setGame } = useContext(QuestionsContext)
+    const { currentQuestion, questionType, startGame, responseType, checkQuestion, victories, percentage, status } = useContext(QuestionsContext)
     const textArea = useInputValue()
     const navigate = useNavigate()
 

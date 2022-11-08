@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App';
-import './index.css'
+import '@/styles/index.css'
 import '@/fonts/din-round.woff2'
 import '@/fonts/din-round2.woff2'
 import { QuestionsProvider } from './context'

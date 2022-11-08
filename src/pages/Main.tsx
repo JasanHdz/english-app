@@ -1,20 +1,38 @@
 import { Link } from 'react-router-dom'
-import Wrapper from '@/components/Layout/Wrapper'
-import { PracticePaths } from '@/routes/paths'
+import { LearnPaths } from '@/routes/paths'
+
+const topicList = [
+    {
+        name: 'Pronouns + Verb to be',
+        topic: 'pronouns'
+    },
+    {
+        name: 'Present Simple',
+        topic: 'present'
+    },
+    {
+        name: 'Future Simple aux(will)',
+        topic: 'future-simple'
+    },
+    {
+        name: 'Future Simple aux(going to)',
+        topic: 'future'
+    },
+]
 
 function Main() {
     return (
-        <Wrapper className='font-sans'>
-            <h1>Hello {'{{ USER_NAME }}'}</h1>
-            <p className='font-bold mt-10'>List of Topics:</p>
+        <>
+            <h2 className='text-xl font-bold'>Hello {'{{ USER_NAME }}'}</h2>
+            <p className='font-bold mt-6'>List of Topics:</p>
             <ul className='my-3 pl-3 grid gap-2'>
-                {Object.entries(PracticePaths).map(([key, value]) => (
-                    <li key={key}>
-                        <Link to={value}>{key.split('_').join(' ')} { }</Link>
+                {topicList.map(({ topic, name }, index) => (
+                    <li key={index}>
+                        <Link to={LearnPaths.TOPIC.replace(':topic', topic)}>{name}</Link>
                     </li>
                 ))}
             </ul>
-        </Wrapper>
+        </>
     )
 }
 

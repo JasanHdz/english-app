@@ -1,27 +1,40 @@
 import { lazy } from "react"
 import { IRoute } from "@/interfaces"
-import { PracticePaths } from './paths'
+import { LearnPaths, PracticePaths, CardsPaths } from './paths'
 
 const Main = lazy(() => import('@/pages/Main'))
-const SimplePresent = lazy(() => import('@/pages/SimplePresent'))
+const TopicSlug = lazy(() => import('@/pages/topic/Slug'))
+const Practice = lazy(() => import('@/pages/practice/Practice'))
+const SimplePresent = lazy(() => import('@/pages/practice/SimplePresent'))
+const Cards = lazy(() => import('@/pages/cards/Cards'))
 
-const { SIMPLE_PRESENT, FUTURE_SIMPLE, PRONOUNS } = PracticePaths
+const { TOPIC, HOME } = LearnPaths
+const { PRACTICE, SIMPLE_PRESENT } = PracticePaths
+const { CARDS } = CardsPaths
 
 export const routes: IRoute[] = [
     {
         component: Main,
-        path: '/'
+        path: HOME,
+        layout: 'LEARN'
+    },
+    {
+        component: TopicSlug,
+        path: TOPIC,
+    },
+    {
+        component: Practice,
+        path: PRACTICE,
+        layout: 'LEARN'
     },
     {
         component: SimplePresent,
-        path: SIMPLE_PRESENT
+        path: SIMPLE_PRESENT,
+        layout: 'PRACTICE',
     },
     {
-        component: null,
-        path: FUTURE_SIMPLE
-    },
-    {
-        component: null,
-        path: PRONOUNS
+        component: Cards,
+        path: CARDS,
+        layout: 'LEARN'
     },
 ]
