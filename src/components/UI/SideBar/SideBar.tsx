@@ -1,6 +1,5 @@
 import { useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import usePlatform from '../../../hooks/usePlatform';
 
 const items = [
   {
@@ -28,7 +27,7 @@ const items = [
 export function SideBar() {
   const active = 'border-2 border-blue-400 bg-blue-50'
   const location = useLocation()
-  const { platform } = window.navigator
+  const { platform } = useMemo(() => window.navigator, [])
 
   return (
     <div style={{ paddingBottom: platform === 'iPhone' ? 28 : 12 }} className="fixed bg-white inset-x-0 bottom-0 px-4 border-t pt-3 sm:p-0 sm:border-none sm:sticky sm:mr-6 sm:top-0">
