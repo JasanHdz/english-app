@@ -21,7 +21,7 @@ function Slug() {
 
     return (
         <>
-            <h1 className='mb-4'>{data?.meta?.properties?.Name?.title[0]?.plain_text}</h1>
+            {/* <h1 className='mb-4 text-4xl'>{data?.meta?.properties?.Name?.title[0]?.plain_text}</h1> */}
             {data?.blocks.map((block, index) => (
                 <RenderBlock
                     key={index}

@@ -1,27 +1,36 @@
-import { Block, BlockType } from '@/interfaces'
+import { BlockType, RichText, Block } from '@/interfaces'
 
-export function getTextBlock(block: Block) {
-    const { type } = block
-    const { rich_text } = block[type]
+const COLORS: { [key: string]: string} = {
+    blue: '#337ea9',
+    brown: '#9f6b53',
+    gray: '#787774',
+    green: '#448361',
+    orange: '#d9730d',
+    pink: '#c14c8a',
+    purple: '#9065b0',
+    red: '#d44c47',
+    yellow: '#cb912f',
+}
 
-    const elements = rich_text.map((item) => {
+export function getTextBlock(richText: RichText[]) {
+    const elements = richText.map((item) => {
         const { text, annotations } = item
         const { content, link } = text
         let element = content
+        let classes = []
+        let color = annotations.color !== 'default' ? COLORS[annotations.color] : '#37352f'
 
         if (Object.values(annotations).includes(true)) {
-            let classes = []
-            if (annotations.color !== 'default') classes.push(`text-${annotations.color}-600`)
             if (annotations.bold) classes.push('font-bold')
             if (annotations.italic) classes.push('italic')
             if (annotations.underline) classes.push('underline')
             if (annotations.strikethrough) classes.push('line-through')
-
-            element = `<span class="${classes.join(' ')}">${element}</span>`
         }
 
+        element = `<span style="color: ${color}" class="${classes.join(' ')}">${element}</span>`
+
         if (link !== null) {
-            element = `<a target='_blank' href="${link.url}">${element}</a>`
+            element = `<a class="${classes.join(' ')} target='_blank' href="${link.url}">${element}</a>`
         }
 
         return element

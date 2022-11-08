@@ -2,9 +2,7 @@
 export type BlockType = 
     | 'paragraph' | 'heading_1' | 'heading_2' | 'heading_3' 
     | 'bulleted_list_item' |'numbered_list_item' |'toggle'
-    | 'divider' | 'video' | 'image'
-    |'to_do' |'quote' |'callout' |'synced_block' |'template'
-    |'column' |'child_page' |'child_database'
+    | 'divider' | 'video' | 'image' | 'table' | 'table_row'
 
 export interface INotionPage {
     meta:   Meta;
@@ -39,6 +37,10 @@ export interface BlockContent {
     external:  {
         url:    string
     }
+    has_column_header?: boolean
+    has_row_header?:    boolean
+    cells?:   RichText[][]
+    results?: Block[]
 }
 
 export interface RichText {
