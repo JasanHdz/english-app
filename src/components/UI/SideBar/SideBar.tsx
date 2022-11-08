@@ -1,5 +1,6 @@
 import { useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import usePlatform from '../../../hooks/usePlatform';
 
 const items = [
   {
@@ -27,15 +28,16 @@ const items = [
 export function SideBar() {
   const active = 'border-2 border-blue-400 bg-blue-50'
   const location = useLocation()
-  const platform = useMemo(() => window.navigator.platform, [])
+  const { platform } = window.navigator
+
   return (
-    <div className={`fixed bg-white inset-x-0 bottom-0 px-4 border-t pt-3 pb-${platform.toLowerCase() === 'iphone' ? '7' : '2'} sm:p-0 sm:border-none sm:sticky sm:mr-6 sm:top-0`}>
+    <div style={{ paddingBottom: platform === 'iPhone' ? 28 : 12 }} className="fixed bg-white inset-x-0 bottom-0 px-4 border-t pt-3 sm:p-0 sm:border-none sm:sticky sm:mr-6 sm:top-0">
       <ul className='flex justify-between gap-6 sm:flex-col sm:gap-2'>
         {items.map(({ label, iconURL, link }) => {
           const classItem = 'flex gap-2 items-center rounded-xl p-0.5 sm:h-14 sm:p-2 sm:px-5 sm:w-56 hover:bg-gray-100'.split(' ')
           if (location.pathname.includes(link)) classItem.push(...active.split(' '))
           return (
-            <Link to={link}>
+            <Link key={link} to={link}>
               <li className={classItem.join(' ')}>
                 <div className='inline-block w-max'>
                   <img className={`${link.includes('profile') ? 'rounded-full' : ''} w-9 h-9`} src={iconURL} alt={label} />
