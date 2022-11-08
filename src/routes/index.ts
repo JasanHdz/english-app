@@ -16,7 +16,6 @@ export const routes: IRoute[] = [
     {
         component: Main,
         path: HOME,
-        layout: 'LEARN'
     },
     {
         component: TopicSlug,
@@ -25,7 +24,6 @@ export const routes: IRoute[] = [
     {
         component: Practice,
         path: PRACTICE,
-        layout: 'LEARN'
     },
     {
         component: SimplePresent,
@@ -35,6 +33,5 @@ export const routes: IRoute[] = [
     {
         component: Cards,
         path: CARDS,
-        layout: 'LEARN'
     },
 ]

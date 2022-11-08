@@ -16,22 +16,27 @@ const items = [
     iconURL: 'https://d35aaqx5ub95lt.cloudfront.net/images/path/d6ba80faa8ea800a09f77470e0852f8c.svg',
     link: '/cards',
   },
+  {
+    label: 'Profile',
+    iconURL: 'https://simg-ssl.duolingo.com/avatar/default_2/medium',
+    link: '/profile',
+  },
 ]
 
 export function SideBar() {
   const active = 'border-2 border-blue-400 bg-blue-50'
   const location = useLocation()
   return (
-    <div className='mr-3 sm:mx-6 sticky top-0'>
-      <ul className='flex flex-col gap-6 sm:gap-2'>
+    <div className='fixed bg-white inset-x-0 bottom-0 px-4 border-t pt-3 pb-2 sm:p-0 sm:border-none sm:sticky sm:mr-6 sm:top-0'>
+      <ul className='flex justify-between gap-6 sm:flex-col sm:gap-2'>
         {items.map(({ label, iconURL, link }) => {
-          const classItem = 'flex gap-2 items-center px-3 sm:px-5 sm:w-56 py-2 rounded-2xl hover:bg-gray-100'.split(' ')
+          const classItem = 'w-12 h-12 flex gap-2 items-center rounded-2xl p-1 sm:h-14 sm:p-2 sm:px-5 sm:w-56 hover:bg-gray-100'.split(' ')
           if (location.pathname.includes(link)) classItem.push(...active.split(' '))
           return (
             <Link to={link}>
               <li className={classItem.join(' ')}>
                 <div className='inline-block w-max'>
-                  <img className='w-9 h-9' src={iconURL} alt={label} />
+                  <img className={`${link.includes('profile') ? 'rounded-full' : ''} w-9 h-9`} src={iconURL} alt={label} />
                 </div>
                 <p className={`hidden sm:block text-sm text-${location.pathname.includes(link) ? 'blue' : 'gray'}-400 font-bold hover:text-gray-600`}>{label}</p>
               </li>

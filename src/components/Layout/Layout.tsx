@@ -8,18 +8,9 @@ export function Layout({ children, type }: { children: JSX.Element, type?: Layou
             return (
                 <>
                     <Navbar />
-                    <Wrapper style={{ gridTemplateColumns: 'min-content 1fr' }}>
-                        {children}
-                    </Wrapper>
-                </>
-            )
-        case 'LEARN':
-            return (
-                <>
-                    <Navbar />
-                    <Wrapper className='grid my-4' style={{ gridTemplateColumns: 'min-content 1fr' }}>
+                    <Wrapper className='flex sm:my-4'>
                         <SideBar />
-                        <div>
+                        <div className='flex-1'>
                             {children}
                         </div>
                     </Wrapper>
