@@ -1,0 +1,688 @@
+{
+    "regular": [
+        {
+            "image": "https://utel.mx/blog/wp-content/uploads/2013/04/shutterstock_130099715.jpg",
+            "continuosForm": "accepting",
+            "baseForm": "accept",
+            "passTense": "accepted",
+            "suffix": "Id",
+            "passParticiple": "accepted",
+            "spanish": "Aceptar"
+        },
+        {
+            "image": "https://www.webconsultas.com/sites/default/files/styles/wc_adaptive_noticia__small/public/media/2022/07/11/sal_comida.jpg",
+            "continuosForm": "adding",
+            "baseForm": "add",
+            "passTense": "added",
+            "passParticiple": "added",
+            "spanish": "Añadir",
+            "suffix": "Id"
+        },
+        {
+            "image": "https://www.managementjournal.net/images/joomlart/article/f2341fa0efc63cf40f8449430cf6a944.jpg",
+            "continuosForm": "admitting",
+            "baseForm": "admit",
+            "passTense": "admitted",
+            "passParticiple": "admitted",
+            "spanish": "Admitir",
+            "suffix": "Id"
+        },
+        {
+            "continuosForm": "affecting",
+            "baseForm": "affect",
+            "passTense": "affected",
+            "passParticiple": "affected",
+            "spanish": "Afectar",
+            "suffix": "Id",
+            "image": "https://ichef.bbci.co.uk/news/640/cpsprodpb/10A67/production/_103199186__103196503_gettyimages-500562554_crop.jpg"
+        },
+        {
+            "continuosForm": "collecting",
+            "baseForm": "collect",
+            "passTense": "collected",
+            "passParticiple": "collected",
+            "spanish": "Juntar",
+            "suffix": "Id",
+            "image": "https://sooluciona.com/wp-content/uploads/2018/11/juntar.jpg"
+        },
+        {
+            "continuosForm": "counting",
+            "baseForm": "count",
+            "passTense": "counted",
+            "passParticiple": "counted",
+            "spanish": "Contar",
+            "suffix": "Id",
+            "image": "https://www.editorialavante.com.mx/wp-content/uploads/2021/06/Contar-1-1024x576.jpeg"
+        },
+        {
+            "continuosForm": "dating",
+            "baseForm": "date",
+            "passTense": "dated",
+            "passParticiple": "dated",
+            "spanish": "Cita",
+            "suffix": "Id",
+            "image": "https://cloudfront-us-east-1.images.arcpublishing.com/semana/PS7VABP7KVG4JMGXUBBPA3KYPE.jpg"
+        },
+        {
+            "continuosForm": "deciding",
+            "baseForm": "decide",
+            "passTense": "decided",
+            "passParticiple": "decided",
+            "spanish": "Decidir",
+            "suffix": "Id",
+            "image": "https://www.randstad.es/wp-content/uploads/2016/08/sindrome-hamlet-880.jpg"
+        },
+        {
+            "continuosForm": "dividing",
+            "baseForm": "divide",
+            "passTense": "divided",
+            "passParticiple": "divided",
+            "spanish": "Dividir",
+            "suffix": "Id",
+            "image": "https://www.lucaedu.com/wp-content/uploads/2022/01/Ensenar-a-dividir.jpg"
+        },
+        {
+            "continuosForm": "ending",
+            "baseForm": "end",
+            "passTense": "ended",
+            "passParticiple": "ended",
+            "spanish": "Terminar",
+            "suffix": "Id",
+            "image": "https://www.publico.es/psicologia-y-mente/wp-content/uploads/2022/08/crisis-despues-universidad-1-1024x683.jpg"
+        },
+        {
+            "continuosForm": "expecting",
+            "baseForm": "expect",
+            "passTense": "expected",
+            "passParticiple": "expected",
+            "spanish": "Esperar",
+            "suffix": "Id",
+            "image": "https://st.depositphotos.com/1020157/1930/i/600/depositphotos_19300405-stock-photo-the-business-woman-with-clock.jpg"
+        },
+        {
+            "continuosForm": "extending",
+            "baseForm": "extend",
+            "passTense": "extended",
+            "passParticiple": "extended",
+            "spanish": "Extender",
+            "suffix": "Id",
+            "image": "https://img.freepik.com/fotos-premium/hombre-negocios-traje-extender-mano-esperando-apreton-manos_36367-994.jpg"
+        },
+        {
+            "continuosForm": "heading",
+            "baseForm": "head",
+            "passTense": "headed",
+            "passParticiple": "headed",
+            "spanish": "Dirigir",
+            "suffix": "Id",
+            "image": "https://i1.wp.com/www.revistamercado.do/wp-content/uploads/2022/04/estrategias-clave-copy.jpg"
+        },
+        {
+            "continuosForm": "including",
+            "baseForm": "include",
+            "passTense": "included",
+            "passParticiple": "included",
+            "spanish": "Incluir",
+            "suffix": "Id",
+            "image": "https://www.mejoresempleos.com.mx/wp-content/uploads/2019/12/%C2%BFC%C3%B3mo-incluir-a-personas-con-discapacidad-a-mi-empresa.jpg"
+        },
+        {
+            "continuosForm": "intending",
+            "baseForm": "intend",
+            "passTense": "intended",
+            "passParticiple": "intended",
+            "spanish": "Pretender",
+            "suffix": "Id",
+            "image": "https://josecardenas.com/wp-content/uploads/2015/05/muere-escalador.jpg"
+        },
+        {
+            "continuosForm": "inviting",
+            "baseForm": "invite",
+            "passTense": "invited",
+            "passParticiple": "invited",
+            "spanish": "Invitar",
+            "suffix": "Id",
+            "image": "https://www.churchofjesuschrist.org/si/getImage/large?url=https%3A//content.churchofjesuschrist.org/si/bc/si/seminary/images/teaser/CWD_75af6d43-9b7c-4c2c-b2ba-9080fd27fb7d.jpg"
+        },
+        {
+            "continuosForm": "Lasting",
+            "baseForm": "Last",
+            "passTense": "Lasted",
+            "passParticiple": "Lasted",
+            "spanish": "Durar",
+            "suffix": "Id",
+            "image": "https://www.65ymas.com/uploads/s1/11/55/91/cuanto-debe-durar-la-siesta-para-realmente-sea-beneficiosa_1_621x621.jpeg"
+        },
+        {
+            "continuosForm": "Needing",
+            "baseForm": "Need",
+            "passTense": "Needed",
+            "passParticiple": "Needed",
+            "spanish": "Necesitar",
+            "suffix": "Id",
+            "image": "https://img.freepik.com/vector-premium/mano-psicologo-ayuda-mujer-triste-deshacerse-depresion-infeliz-nina-llorando-cubriendo-su-rostro-abraza-sus-rodillas-persona-solitaria-necesita-apoyo-cuidado-debido-tristeza-ansiedad-estres-salud-mental_458444-457.jpg"
+        },
+        {
+            "continuosForm": "Pointing",
+            "baseForm": "Point",
+            "passTense": "Pointed",
+            "passParticiple": "Pointed",
+            "spanish": "Apuntar",
+            "suffix": "Id",
+            "image": "https://www.wikihow.com/images_en/thumb/4/4c/Aim-a-Pistol-Step-2-Version-2.jpg/v4-460px-Aim-a-Pistol-Step-2-Version-2.jpg.webp"
+        },
+        {
+            "continuosForm": "Repeating",
+            "baseForm": "Repeat",
+            "passTense": "Repeated",
+            "passParticiple": "Repeated",
+            "spanish": "Repetir",
+            "suffix": "Id",
+            "image": "https://prints.ultracoloringpages.com/9cea78a9ab6a40219c7bc6775eba6415.png"
+        },
+        {
+            "continuosForm": "Resting",
+            "baseForm": "Rest",
+            "passTense": "Rested",
+            "passParticiple": "Rested",
+            "spanish": "Descansar",
+            "suffix": "Id",
+            "image": "https://ichef.bbci.co.uk/news/640/cpsprodpb/1793E/production/_91347569_thinkstockphotos-498200336.jpg"
+        },
+        {
+            "continuosForm": "Starting",
+            "baseForm": "Start",
+            "passTense": "Started",
+            "passParticiple": "Started",
+            "spanish": "Empezar",
+            "suffix": "Id",
+            "image": "https://share.america.gov/wp-content/uploads/2015/06/shutterstock_223131421.jpg"
+        },
+        {
+            "continuosForm": "Visiting",
+            "baseForm": "Visit",
+            "passTense": "Visited",
+            "passParticiple": "Visited",
+            "spanish": "Visitar",
+            "suffix": "Id",
+            "image": "https://studycli.org/wp-content/uploads/2021/06/Best-Places-in-China-12.jpg"
+        },
+        {
+            "continuosForm": "Waiting",
+            "baseForm": "Wait",
+            "passTense": "Waited",
+            "passParticiple": "Waited",
+            "spanish": "Esperar",
+            "suffix": "Id",
+            "image": "https://affirmation.org/wp-content/uploads/2019/01/Nao-quero-mais-esperar-Um-sentimento-por-dia.jpg"
+        },
+        {
+            "continuosForm": "Wanting",
+            "baseForm": "Want",
+            "passTense": "Wanted",
+            "passParticiple": "Wanted",
+            "spanish": "Querer",
+            "suffix": "Id",
+            "image": "https://www.soyvisual.org/sites/default/files/styles/twitter_card/public/images/sheets/85_querer.jpg?itok=WB5mal_S"
+        },
+        {
+            "continuosForm": "Asking",
+            "baseForm": "Ask",
+            "passTense": "Asked",
+            "passParticiple": "Asked",
+            "spanish": "Preguntar",
+            "suffix": "t",
+            "image": "https://euroresidentes.com/colegio/imagenes/preguntar-clase.jpg"
+        },
+        {
+            "continuosForm": "Checking",
+            "baseForm": "Check",
+            "passTense": "Checked",
+            "passParticiple": "Checked",
+            "spanish": "Verificar",
+            "suffix": "t",
+            "image": "https://jdr-coaching.com/wp-content/uploads/2018/04/verificar-2-770x400.jpg"
+        },
+        {
+            "continuosForm": "Cooking",
+            "baseForm": "Cook",
+            "passTense": "Cooked",
+            "passParticiple": "Cooked",
+            "spanish": "Cocinar",
+            "suffix": "t",
+            "image": "https://dam.cocinafacil.com.mx/wp-content/uploads/2019/07/cocinar-verduras.jpg"
+        },
+        {
+            "continuosForm": "Dancing",
+            "baseForm": "Dance",
+            "passTense": "Danced",
+            "passParticiple": "Danced",
+            "spanish": "Bailar",
+            "suffix": "t",
+            "image": "https://static7.depositphotos.com/1010535/768/i/600/depositphotos_7680518-stock-photo-latino-dancers-in-action.jpg"
+        },
+        {
+            "continuosForm": "Dressing",
+            "baseForm": "Dress",
+            "passTense": "Dressed",
+            "passParticiple": "Dressed",
+            "spanish": "Vestir",
+            "suffix": "t",
+            "image": "https://www.cleanipedia.com/images/iohqr4whhl17/6dOqLH1gpp5rXkI7acIIyl/ba5db39aa6153bdd9dabc7a750c2949a/R2V0dHlJbWFnZXMtMTA4MTUwNzM1Ni5qcGc/990w-660h/c%C3%B3mo-vestirse-para-una-entrevista-de-trabajo-correctamente.jpg"
+        },
+        {
+            "continuosForm": "Finishing",
+            "baseForm": "Finish",
+            "passTense": "Finished",
+            "passParticiple": "Finished",
+            "spanish": "Terminar",
+            "suffix": "t",
+            "image": "https://st3.depositphotos.com/1018611/13001/i/450/depositphotos_130010522-stock-photo-teenage-sprinter-crossing-finish-line.jpg"
+        },
+        {
+            "continuosForm": "Helping",
+            "baseForm": "Help",
+            "passTense": "Helped",
+            "passParticiple": "Helped",
+            "spanish": "Ayudar",
+            "suffix": "t",
+            "image": "https://images.reporteindigo.com/wp-content/uploads/2022/01/ayudar-monsalve-1024x535.jpg"
+        },
+        {
+            "continuosForm": "Jumping",
+            "baseForm": "Jump",
+            "passTense": "Jumped",
+            "passParticiple": "Jumped",
+            "spanish": "Saltar",
+            "suffix": "t",
+            "image": "https://media.istockphoto.com/id/1255604833/photo/happy-energetic-smiling-young-african-american-woman-jumping.jpg?s=170667a&w=0&k=20&c=P5U_Gd2tovXwzuiKHkcusG-ONDx8qlX2sl6ZVKLGiqM="
+        },
+        {
+            "continuosForm": "Liking",
+            "baseForm": "Like",
+            "passTense": "Liked",
+            "passParticiple": "Liked",
+            "spanish": "Gustar",
+            "suffix": "t",
+            "image": "https://juliehyde.com.au/wp-content/uploads/2014/12/Liked.jpg"
+        },
+        {
+            "continuosForm": "Looking",
+            "baseForm": "Look",
+            "passTense": "Looked",
+            "passParticiple": "Looked",
+            "spanish": "Mirar",
+            "suffix": "t",
+            "image": "https://difiere.com/wp-content/uploads/sites/4/2018/04/allef-vinicius-248316-unsplash-1024x707.jpg"
+        },
+        {
+            "continuosForm": "Missing",
+            "baseForm": "Miss",
+            "passTense": "Missed",
+            "passParticiple": "Missed",
+            "spanish": "Extrañar",
+            "suffix": "t",
+            "image": "https://lamenteesmaravillosa.com/wp-content/uploads/2016/01/mujer-recordando-a-alguien.jpg"
+        },
+        {
+            "continuosForm": "Noticing",
+            "baseForm": "Notice",
+            "passTense": "Noticed",
+            "passParticiple": "Noticed",
+            "spanish": "Notar",
+            "suffix": "t",
+            "image": "https://cdn3.vectorstock.com/i/1000x1000/27/67/important-notice-sign-flat-concept-vector-21892767.jpg"
+        },
+        {
+            "continuosForm": "Placing",
+            "baseForm": "Place",
+            "passTense": "Placed",
+            "passParticiple": "Placed",
+            "spanish": "Colocar",
+            "suffix": "t",
+            "image": "https://www.really-learn-english.com/image-files/table.png"
+        },
+        {
+            "continuosForm": "Practicing",
+            "baseForm": "Practice",
+            "passTense": "Practiced",
+            "passParticiple": "Practiced",
+            "spanish": "Practicar",
+            "suffix": "t",
+            "image": "https://www.fluentu.com/blog/german/wp-content/uploads/sites/5/2016/11/german-verb-practice.jpg"
+        },
+        {
+            "continuosForm": "Pushin",
+            "baseForm": "Push",
+            "passTense": "Pushed",
+            "passParticiple": "Pushed",
+            "spanish": "Empujar",
+            "suffix": "t",
+            "image": "https://daily.wordreference.com/wp-content/uploads/2019/06/push.jpg"
+        },
+        {
+            "continuosForm": "Releasing",
+            "baseForm": "Release",
+            "passTense": "Released",
+            "passParticiple": "Released",
+            "spanish": "Liberar",
+            "suffix": "t",
+            "image": "https://merriam-webster.com/assets/ld/word_of_the_day/images/2838/large.jpg"
+        },
+        {
+            "continuosForm": "Stopping",
+            "baseForm": "Stop",
+            "passTense": "Stopped",
+            "passParticiple": "Stopped",
+            "spanish": "Detener",
+            "suffix": "t",
+            "image": "https://img.freepik.com/vector-premium/ilustracion-dibujos-animados-servicio-aparcacoches-senal-stop_339032-536.jpg"
+        },
+        {
+            "continuosForm": "Talking",
+            "baseForm": "Talk",
+            "passTense": "Talked",
+            "passParticiple": "Talked",
+            "spanish": "Hablar",
+            "suffix": "t",
+            "image": "https://upjourney.com/wp-content/uploads/2019/11/how-to-stop-yourself-from-talking-too-much.jpg"
+        },
+        {
+            "continuosForm": "Walking",
+            "baseForm": "Walk",
+            "passTense": "Walked",
+            "passParticiple": "Walked",
+            "spanish": "Caminar",
+            "suffix": "t",
+            "image": "https://www.beaumont.org/images/default-source/news/walking.jpg?sfvrsn=a75378ef_2"
+        },
+        {
+            "continuosForm": "Washing",
+            "baseForm": "Wash",
+            "passTense": "Washed",
+            "passParticiple": "Washed",
+            "spanish": "Lavar",
+            "suffix": "t",
+            "image": "https://www.safefood.net/getmedia/6ae974b6-d205-4241-a94f-f8ecdc327214/Handwashing-1.jpg"
+        },
+        {
+            "continuosForm": "Watching",
+            "baseForm": "Watch",
+            "passTense": "Watched",
+            "passParticiple": "Watched",
+            "spanish": "Mirar",
+            "suffix": "t",
+            "image": "http://img.global.news.samsung.com/global/wp-content/uploads/2015/07/Watermark_Inside_Title-Image_0708_v1.jpg"
+        },
+        {
+            "continuosForm": "Wishing",
+            "baseForm": "Wish",
+            "passTense": "Wished",
+            "passParticiple": "Wished",
+            "spanish": "Desear",
+            "suffix": "t",
+            "image": "https://whatsup.es/wp-content/uploads/2018/10/istock_73161863_small.jpg"
+        },
+        {
+            "continuosForm": "Working",
+            "baseForm": "Work",
+            "passTense": "Worked",
+            "passParticiple": "Worked",
+            "spanish": "Trabajar",
+            "suffix": "t",
+            "image": "https://fjwp.s3.amazonaws.com/blog/wp-content/uploads/2018/07/01153710/benefits-of-working-from-home-1024x512.jpg"
+        },
+        {
+            "continuosForm": "Answering",
+            "baseForm": "Answer",
+            "passTense": "Answered",
+            "passParticiple": "Answered",
+            "spanish": "Contestar",
+            "suffix": "t",
+            "image": "https://www.incimages.com/uploaded_files/image/1920x1080/getty_953426266_380963.jpg"
+        },
+        {
+            "continuosForm": "Arriving",
+            "baseForm": "Arrive",
+            "passTense": "Arrived",
+            "passParticiple": "Arrived",
+            "spanish": "Llegar",
+            "suffix": "t",
+            "image": "https://e00-marca.uecdn.es/imagenes/2014/05/07/en/football/spanish_football/1399461249_extras_noticia_foton_7_0.jpg"
+        },
+        {
+            "continuosForm": "Belonging",
+            "baseForm": "Belong",
+            "passTense": "Belonged",
+            "passParticiple": "Belonged",
+            "spanish": "Pertenecer",
+            "suffix": "d",
+            "image": "https://www.yavendras.com/imgs/ejemplos/grupos-de-pertenencia.jpg"
+        },
+        {
+            "continuosForm": "Carrying",
+            "baseForm": "Carry",
+            "passTense": "Carried",
+            "passParticiple": "Carried",
+            "spanish": "Llevar",
+            "suffix": "d",
+            "image": "https://media.istockphoto.com/id/480750456/pt/foto/alegre-homem-de-entrega.jpg?s=612x612&w=0&k=20&c=GKR39i-FN4s6f_f2HiPFRKjKu0l6pLa3FFu4yq6NIag="
+        },
+        {
+            "continuosForm": "Causing",
+            "baseForm": "Cause",
+            "passTense": "Caused",
+            "passParticiple": "Caused",
+            "spanish": "Causar",
+            "suffix": "d",
+            "image": "https://lamenteesmaravillosa.com/wp-content/uploads/2018/12/hombre-subiendo-escaleras.jpg"
+        },
+        {
+            "continuosForm": "Changing",
+            "baseForm": "Change",
+            "passTense": "Changed",
+            "passParticiple": "Changed",
+            "spanish": "Cambiar",
+            "suffix": "d",
+            "image": "https://thewell.unc.edu/wp-content/uploads/sites/1007/2022/09/Change-hero.jpg"
+        },
+        {
+            "continuosForm": "Cleaning",
+            "baseForm": "Clean",
+            "passTense": "Cleaned",
+            "passParticiple": "Cleaned",
+            "spanish": "Limpiar",
+            "suffix": "d",
+            "image": "https://www.dogtas.com/images/uploaded/blog-images/how-to-clean-a-messy-house/woman-doing-cleaning-the-house.jpg"
+        },
+        {
+            "continuosForm": "Climbing",
+            "baseForm": "Climb",
+            "passTense": "Climbed",
+            "passParticiple": "Climbed",
+            "spanish": "Escalar",
+            "suffix": "d",
+            "image": "https://www.outsideonline.com/wp-content/uploads/2020/09/24/climber-mountain-valley_s.jpg"
+        },
+        {
+            "continuosForm": "Considering",
+            "baseForm": "Consider",
+            "passTense": "Considered",
+            "passParticiple": "Considered",
+            "spanish": "Considerar",
+            "suffix": "d",
+            "image": "https://kueski.com/blog/wp-content/uploads/2019/07/factores-pedir-prestamo.jpg"
+        },
+        {
+            "continuosForm": "Crying",
+            "baseForm": "Cry",
+            "passTense": "Cried",
+            "passParticiple": "Cried",
+            "spanish": "Llorar",
+            "suffix": "d",
+            "image": "https://www.consumer.es/app/uploads/2019/07/img_beneficios-de-llorar.jpg"
+        },
+        {
+            "continuosForm": "Delivering",
+            "baseForm": "Deliver",
+            "passTense": "Delivered",
+            "passParticiple": "Delivered",
+            "spanish": "Entregar",
+            "suffix": "d",
+            "image": "https://www.lalamove.com/hubfs/Lalamove%20Website%202020/img-why-deliver-with-us.png"
+        },
+        {
+            "continuosForm": "Enjoying",
+            "baseForm": "Enjoy",
+            "passTense": "Enjoyed",
+            "passParticiple": "Enjoyed",
+            "spanish": "Disfrutar",
+            "suffix": "d",
+            "image": "https://www.insouthmagazine.com/wp-content/uploads/2020/11/mujeres-solteras.jpg"
+        },
+        {
+            "continuosForm": "Filling",
+            "baseForm": "Fill",
+            "passTense": "Filled",
+            "passParticiple": "Filled",
+            "spanish": "Llenar",
+            "suffix": "d",
+            "image": "https://www.123rf.com/photo_20731091_glass-is-filling-up-with-water.html"
+        },
+        {
+            "continuosForm": "Following",
+            "baseForm": "Follow",
+            "passTense": "Followed",
+            "passParticiple": "Followed",
+            "spanish": "Seguir",
+            "suffix": "d",
+            "image": "https://www.mubis.es/media/users/12464/150282/que-utilidad-tiene-seguir-a-alguien-en-mubis-original.jpg"
+        },
+        {
+            "continuosForm": "Learning",
+            "baseForm": "Learn",
+            "passTense": "Learned",
+            "passParticiple": "Learned",
+            "spanish": "Aprender",
+            "suffix": "d",
+            "image": "https://www.psd.gov.sg/images/default-source/challenge-library/ideas/work-better/learn-something-new-in-5-minutes/learning-720x400.jpg"
+        },
+        {
+            "continuosForm": "Listening",
+            "baseForm": "Listen",
+            "passTense": "Listened",
+            "passParticiple": "Listened",
+            "spanish": "Escuchar",
+            "suffix": "d",
+            "image": "https://meritschool.com/wp-content/uploads/2020/01/diferencia-hear-listen.jpg"
+        },
+        {
+            "continuosForm": "Living",
+            "baseForm": "Live",
+            "passTense": "Lived",
+            "passParticiple": "Lived",
+            "spanish": "Vivir",
+            "suffix": "d",
+            "image": "https://thumbs.dreamstime.com/b/familia-en-casa-grande-40138834.jpg"
+        },
+        {
+            "continuosForm": "Ordering",
+            "baseForm": "Order",
+            "passTense": "Ordered",
+            "passParticiple": "Ordered",
+            "spanish": "Ordenar",
+            "suffix": "d",
+            "image": "https://www.hogarmania.com/archivos/202105/como-ordenar-con-el-metodo-konmari-poner-practica-1280x720x80xX.jpg"
+        },
+        {
+            "continuosForm": "Playing",
+            "baseForm": "Play",
+            "passTense": "Played",
+            "passParticiple": "Played",
+            "spanish": "Jugar",
+            "suffix": "d",
+            "image": "https://album.mediaset.es/eimg/2019/11/12/CWgKzrMBwHIdTaih1RvgI3.jpg?w=1200"
+        },
+        {
+            "continuosForm": "Pulling",
+            "baseForm": "Pull",
+            "passTense": "Pulled",
+            "passParticiple": "Pulled",
+            "spanish": "Jalar",
+            "suffix": "d",
+            "image": "https://retos-operaciones-logistica.eae.es/wp-content/uploads/2017/12/sistema-pull-y-push.jpg"
+        },
+        {
+            "continuosForm": "Refusing",
+            "baseForm": "Refuse",
+            "passTense": "Refused",
+            "passParticiple": "Refused",
+            "spanish": "Negarse",
+            "suffix": "d",
+            "image": "https://www.thoughtco.com/thmb/95LzSOyuUqOlV0EWJtxjoM0L-zw=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-601798217-59f2396b685fbe00114c6bed.jpg"
+        },
+        {
+            "continuosForm": "Remembering",
+            "baseForm": "Remember",
+            "passTense": "Remembered",
+            "passParticiple": "Remembered",
+            "spanish": "Recordar",
+            "suffix": "d",
+            "image": "https://knowledgeone.ca/wp-content/uploads/2018/11/memories.jpg"
+        },
+        {
+            "continuosForm": "Saving",
+            "baseForm": "Save",
+            "passTense": "Saved",
+            "passParticiple": "Saved",
+            "spanish": "Ahorrar",
+            "suffix": "d",
+            "image": "https://nelsonlawgrouppc.com/media/uploads/2020/06/save-money-after-a-divorce.jpg"
+        },
+        {
+            "continuosForm": "Staying",
+            "baseForm": "Stay",
+            "passTense": "Stayed",
+            "passParticiple": "Stayed",
+            "spanish": "Permanecer",
+            "suffix": "d",
+            "image": "https://www.upsocl.com/wp-content/uploads/2017/01/OKAA.jpg"
+        },
+        {
+            "continuosForm": "Traveling",
+            "baseForm": "Travel",
+            "passTense": "Traveled",
+            "passParticiple": "Traveled",
+            "spanish": "Viajar",
+            "suffix": "d",
+            "image": "https://grupopresidente.com.mx/wp-content/uploads/2021/08/GP-TRAVEL-AG.jpg"
+        },
+        {
+            "continuosForm": "Trying",
+            "baseForm": "Try",
+            "passTense": "Tried",
+            "passParticiple": "Tried",
+            "spanish": "Tratar",
+            "suffix": "d",
+            "image": "https://josecardenas.com/wp-content/uploads/2015/05/muere-escalador.jpg"
+        },
+        {
+            "continuosForm": "Turing",
+            "baseForm": "Turn",
+            "passTense": "Turned",
+            "passParticiple": "Turned",
+            "spanish": "Voltear",
+            "suffix": "d",
+            "image": "https://thumbs.dreamstime.com/b/sharp-curve-road-colorado-mountain-highway-warning-sign-40876336.jpg"
+        },
+        {
+            "continuosForm": "Using",
+            "baseForm": "Use",
+            "passTense": "Used",
+            "passParticiple": "Used",
+            "spanish": "Usar",
+            "suffix": "d",
+            "image": "https://thumbs.dreamstime.com/b/encantador-entrenamiento-de-la-aeromoza-seguridad-antes-los-procedimientos-despegue-del-vuelo-retrato-cerca-una-joven-y-alegre-196394930.jpg"
+        }
+    ]
+}

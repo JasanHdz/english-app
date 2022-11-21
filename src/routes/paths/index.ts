@@ -8,6 +8,8 @@ export const PracticePaths = {
     SIMPLE_PRESENT: '/practice/simple-present',
 }
 
-export const CardsPaths = {
+
+export const SystemPaths = {
+    PROFILE: '/profile',
     CARDS: '/cards'
 }

@@ -1,7 +1,7 @@
 import { ReactNode, useReducer } from 'react'
 import { QuestionsContext, questionsReducer } from '@/context'
 import { IQuestion, SentenceType } from '@/interfaces'
-import data from '@/data.json'
+import data from '@/assets/data.json'
 import { generateRandomElement } from '@/utils/applySentenceColor'
 
 const types: SentenceType[] = ['affirmative', 'interrogative', 'negative']
