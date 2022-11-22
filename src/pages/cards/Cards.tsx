@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Flipper } from "@/components/UI/Flipper"
 import { getRandomList } from '@/utils/applySentenceColor'
 import { IVerb } from "@/interfaces"
 import verbs from '@/assets/verbs.json'
 
-const randomList = getRandomList<IVerb>(verbs.regular, 9)
+const randomList = getRandomList<IVerb>(verbs.regular, 10)
 const shuffleList = () => {
     const firstList = randomList.map((item) => ({ ...item, type: 'image', isFreeze: false }))
     const secondList = randomList.map((item) => ({ ...item, type: 'baseForm', isFreeze: false }))
@@ -36,9 +36,26 @@ function Cards() {
         setList(copy)
     }
 
+    const isSuccess = useMemo(() => list.every((item) => item.isFreeze), [list])
+
+    const isOK = confirm('ok')
+    console.log(isOK)
+
+    useEffect(() => {
+        if (isSuccess) {
+            alert('Congratulations, you got everyone right!')
+            const response = confirm('Do you want to play again?')
+            if (response) {
+                setTimeout(() => {
+                    setList(shuffleList())
+                }, 1500)
+            }
+        }
+    }, [isSuccess])
+
     return (
         <div>
-            <section className="grid grid-cols-3 gap-1.5">
+            <section className="grid grid-cols-4 gap-1.5">
                 {list.map((item, index) => {
                     if (item.type === 'image') {
                         return (

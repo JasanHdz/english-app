@@ -19,17 +19,17 @@ export function Flipper({ children, className, onChange, isActive, setActive, is
             console.log(isFreeze)
             timer = setTimeout(() => {
                 setActive(false)
-            }, 3000)
+            }, 2200)
         }
         return () => clearTimeout(timer)
     }, [isActive])
 
     return (
-        <article className="h-[124px] select-none cursor-pointer bg-gray-500 rounded-xl" onClick={onChange}>
-            <div style={{ ...rotate, transformStyle: 'preserve-3d' }} className="rounded-xl overflow-hidden h-full duration-500">
+        <article className="h-[110px] select-none cursor-pointer bg-gray-500 rounded-xl" onClick={onChange}>
+            <div style={{ ...rotate, transformStyle: 'preserve-3d' }} className="rounded-xl overflow-hidden h-full duration-300">
                 <div style={{ background }} className={`h-full ${isActive ? 'hidden' : 'block'}`}>
                 </div>
-                <div style={rotate} className={`${className} h-full duration-500 ${!isActive ? 'hidden' : 'flex justify-center items-center'}`}>
+                <div style={rotate} className={`${className} h-full duration-300 ${!isActive ? 'hidden' : 'flex justify-center items-center'}`}>
                     {children}
                 </div>
             </div>

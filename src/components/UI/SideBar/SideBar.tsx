@@ -30,7 +30,7 @@ export function SideBar() {
   const { platform } = useMemo(() => window.navigator, [])
 
   return (
-    <div style={{ paddingBottom: platform === 'iPhone' ? 28 : 12 }} className="fixed bg-white inset-x-0 bottom-0 px-4 border-t pt-3 sm:p-0 sm:border-none sm:sticky sm:mr-6 sm:top-0">
+    <div style={{ paddingBottom: platform === 'iPhone' ? 28 : 12 }} className="fixed z-20 bg-white inset-x-0 bottom-0 px-4 border-t pt-3 sm:p-0 sm:border-none sm:sticky sm:mr-6 sm:top-0">
       <ul className='flex justify-between gap-6 sm:flex-col sm:gap-2'>
         {items.map(({ label, iconURL, link }) => {
           const classItem = 'flex gap-2 items-center rounded-xl p-0.5 sm:h-14 sm:p-2 sm:px-5 sm:w-56 hover:bg-gray-100'.split(' ')
