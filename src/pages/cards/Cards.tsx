@@ -38,9 +38,6 @@ function Cards() {
 
     const isSuccess = useMemo(() => list.every((item) => item.isFreeze), [list])
 
-    const isOK = confirm('ok')
-    console.log(isOK)
-
     useEffect(() => {
         if (isSuccess) {
             alert('Congratulations, you got everyone right!')
