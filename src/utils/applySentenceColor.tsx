@@ -16,3 +16,8 @@ export function applySentenceColor(str: string | null, coincidences: string[], c
 export const generateRandomElement = (items: any[]) => {
     return items[Math.floor(Math.random() * items.length)]
 }
+
+export const getRandomList = <T = any>(list: any[], size: number) => {
+    const elements = Array.from({ length: size }).map(() => generateRandomElement(list))
+    return elements as T[]
+}
