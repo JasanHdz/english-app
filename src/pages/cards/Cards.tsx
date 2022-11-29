@@ -83,7 +83,7 @@ function Cards() {
 
     return (
         <div>
-            <small className='pl-1 text-[9px] text-gray-500 font-bold'>Palabras dominadas: {prevList.length / 2}</small>
+            <small className='pl-1 text-[9px] text-gray-500 font-bold'>Palabras dominadas: {prevList.length / 2} de {verbs.regular.length}</small>
             <div className='flex justify-between mb-3'>
                 <select name="first" onChange={onChangeSelected} value={currentOption.first}>
                     {options.map((opt) => {
