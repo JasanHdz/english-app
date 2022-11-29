@@ -11,3 +11,5 @@ export interface IVerb {
     isFreeze?:       boolean
     type:           'image' | 'baseForm'
 }
+
+export type VerbType = | 'image' | 'continuosForm' | 'baseForm' | 'passTense' | 'spanish'

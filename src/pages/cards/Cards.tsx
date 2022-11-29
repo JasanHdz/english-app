@@ -1,24 +1,33 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, ChangeEvent, useCallback } from 'react';
 import { Flipper } from "@/components/UI/Flipper"
 import { getRandomList } from '@/utils/applySentenceColor'
-import { IVerb } from "@/interfaces"
+import { IVerb, VerbType } from "@/interfaces"
 import verbs from '@/assets/verbs.json'
 
-const randomList = getRandomList<IVerb>(verbs.regular, 10)
-const shuffleList = () => {
-    const firstList = randomList.map((item) => ({ ...item, type: 'image', isFreeze: false }))
-    const secondList = randomList.map((item) => ({ ...item, type: 'baseForm', isFreeze: false }))
-    return firstList.concat(secondList).sort(() => 0.5 - Math.random())
-}
+const options: VerbType[] = ['image', 'baseForm', 'continuosForm', 'passTense', 'spanish']
+const initialRandomList = getRandomList<IVerb>([], verbs.regular, 10)
 
 function Cards() {
-    const [list, setList] = useState(shuffleList())
+    const [currentOption, setCurrentOption] = useState<{ first: VerbType, second: VerbType }>({
+        first: 'image',
+        second: 'baseForm'
+    })
+
+    const getShuffleList = useCallback((currentList: IVerb[]): IVerb[] => {
+        const firstList = currentList.map((item) => ({ ...item, type: currentOption.first, isFreeze: false }))
+        const secondList = currentList.map((item) => ({ ...item, type: currentOption.second, isFreeze: false }))
+        return firstList.concat(secondList).sort(() => 0.5 - Math.random()) as IVerb[]
+    }, [currentOption])
+
+    const [prevList, setPrevList] = useState<IVerb[]>([])
+    const [randomList, setRandomList] = useState<IVerb[]>(initialRandomList)
+    const [cardList, setCardList] = useState<IVerb[]>([])
 
     const onChangeItem = (index: number) => {
-        const currentElement = list[index]
+        const currentElement = cardList[index]
         if (currentElement.isFreeze) return
-        const copy = [...list]
-        const subIndex = copy.findIndex((item) => currentElement.baseForm === item.baseForm && item.type !== copy[index].type && item.isFlipped)
+        const copy = [...cardList]
+        const subIndex = copy.findIndex((item) => currentElement.baseForm === item.baseForm && item.type !== currentElement.type && item.isFlipped)
         if (subIndex !== -1) {
             copy[index].isFreeze = true
             copy[subIndex].isFreeze = true
@@ -26,17 +35,27 @@ function Cards() {
 
         // setFlipped
         copy[index].isFlipped = !copy[index].isFlipped
-        setList(copy)
+        setCardList(copy)
     }
 
     const setActive = (index: number, value: boolean) => {
-        const copy = [...list]
+        const copy = [...cardList]
         if (copy[index].isFreeze) return
         copy[index].isFlipped = value
-        setList(copy)
+        setCardList(copy)
     }
 
-    const isSuccess = useMemo(() => list.every((item) => item.isFreeze), [list])
+    const onChangeSelected = (event: ChangeEvent<HTMLSelectElement>) => {
+        const { name, value } = event.target
+        if (name === 'first' && value === currentOption.second) return
+        if (name === 'second' && value === currentOption.first) return
+        setCurrentOption({
+            ...currentOption,
+            [name]: value
+        })
+    }
+
+    const isSuccess = useMemo(() => cardList.length && cardList.every((item) => item.isFreeze), [cardList])
 
     useEffect(() => {
         if (isSuccess) {
@@ -44,16 +63,45 @@ function Cards() {
             const response = confirm('Do you want to play again?')
             if (response) {
                 setTimeout(() => {
-                    setList(shuffleList())
+                    const newRandomList = getRandomList<IVerb>(prevList, verbs.regular, 10)
+                    const newCardList = getShuffleList(newRandomList)
+                    setPrevList([
+                        ...randomList,
+                        ...newRandomList
+                    ])
+                    setRandomList(newRandomList)
+                    setCardList(newCardList)
                 }, 1500)
             }
         }
     }, [isSuccess])
 
+    useEffect(() => {
+        const shuffleList = getShuffleList(randomList)
+        setCardList(shuffleList)
+    }, [currentOption])
+
     return (
         <div>
+            <small className='pl-1 text-[9px] text-gray-500 font-bold'>Palabras dominadas: {prevList.length / 2}</small>
+            <div className='flex justify-between mb-3'>
+                <select name="first" onChange={onChangeSelected} value={currentOption.first}>
+                    {options.map((opt) => {
+                        if (opt !== currentOption.second) {
+                            return <option key={opt} value={opt}>{opt}</option>
+                        }
+                    })}
+                </select>
+                <select name="second" onChange={onChangeSelected} value={currentOption.second}>
+                    {options.map((opt) => {
+                        if (opt !== currentOption.first) {
+                            return <option key={opt} value={opt}>{opt}</option>
+                        }
+                    })}
+                </select>
+            </div>
             <section className="grid grid-cols-4 gap-1.5">
-                {list.map((item, index) => {
+                {cardList.map((item, index) => {
                     if (item.type === 'image') {
                         return (
                             <Flipper
@@ -75,7 +123,7 @@ function Cards() {
                             onChange={() => onChangeItem(index)}
                             setActive={(value) => setActive(index, value)}
                         >
-                            <p className="font-bold text-2xl text-white">{item.baseForm}</p>
+                            <p className="font-bold text-2xl text-white">{item[item.type]}</p>
                         </Flipper>
                     )
                 })}
