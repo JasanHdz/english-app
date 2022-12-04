@@ -80,13 +80,10 @@ function Cards() {
     }, [isSuccess])
 
     useEffect(() => {
-        let initialRandomList: IVerb[] = []
-        if (!prevList.length || !randomList.length) {
-            const initialPrevList = JSON.parse(localStorage.getItem('prevList') ?? '[]')
-            initialRandomList = getRandomList<IVerb>(initialPrevList, verbs.regular, 6)
-            setPrevList(initialPrevList)
-            setRandomList(initialRandomList)
-        }
+        const initialPrevList = JSON.parse(localStorage.getItem('prevList') ?? '[]')
+        const initialRandomList = getRandomList<IVerb>(initialPrevList, verbs.regular, 6)
+        setPrevList(initialPrevList)
+        setRandomList(initialRandomList)
         const shuffleList = getShuffleList(initialRandomList)
         setCardList(shuffleList)
     }, [currentOption])
