@@ -16,7 +16,6 @@ export function Flipper({ children, className, onChange, isActive, setActive, is
     useEffect(() => {
         let timer: ReturnType<typeof setTimeout>
         if (!isFreeze && isActive && setActive) {
-            console.log(isFreeze)
             timer = setTimeout(() => {
                 setActive(false)
             }, 2200)
@@ -25,8 +24,8 @@ export function Flipper({ children, className, onChange, isActive, setActive, is
     }, [isActive])
 
     return (
-        <article className="h-[110px] select-none cursor-pointer bg-gray-500 rounded-xl" onClick={onChange}>
-            <div style={{ ...rotate, transformStyle: 'preserve-3d' }} className="rounded-xl overflow-hidden h-full duration-300">
+        <article className="h-[126px] select-none cursor-pointer bg-gray-500 rounded-lg" onClick={onChange}>
+            <div style={{ ...rotate, transformStyle: 'preserve-3d' }} className="rounded-lg overflow-hidden h-full duration-300">
                 <div style={{ background }} className={`h-full ${isActive ? 'hidden' : 'block'}`}>
                 </div>
                 <div style={rotate} className={`${className} h-full duration-300 ${!isActive ? 'hidden' : 'flex justify-center items-center'}`}>

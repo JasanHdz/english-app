@@ -1,11 +1,11 @@
-import { useState, useMemo, useEffect, ChangeEvent, useCallback } from 'react';
+import { useState, useMemo, useEffect, ChangeEvent, useCallback, useLayoutEffect } from 'react';
 import { Flipper } from "@/components/UI/Flipper"
 import { getRandomList } from '@/utils/applySentenceColor'
 import { IVerb, VerbType } from "@/interfaces"
 import verbs from '@/assets/verbs.json'
 
 const options: VerbType[] = ['image', 'baseForm', 'continuosForm', 'passTense', 'spanish']
-const initialRandomList = getRandomList<IVerb>([], verbs.regular, 10)
+
 
 function Cards() {
     const [currentOption, setCurrentOption] = useState<{ first: VerbType, second: VerbType }>({
@@ -20,7 +20,7 @@ function Cards() {
     }, [currentOption])
 
     const [prevList, setPrevList] = useState<IVerb[]>([])
-    const [randomList, setRandomList] = useState<IVerb[]>(initialRandomList)
+    const [randomList, setRandomList] = useState<IVerb[]>([])
     const [cardList, setCardList] = useState<IVerb[]>([])
 
     const onChangeItem = (index: number) => {
@@ -58,32 +58,42 @@ function Cards() {
     const isSuccess = useMemo(() => cardList.length && cardList.every((item) => item.isFreeze), [cardList])
 
     useEffect(() => {
+        let timer: ReturnType<typeof setTimeout>
         if (isSuccess) {
-            alert('Congratulations, you got everyone right!')
-            const response = confirm('Do you want to play again?')
-            if (response) {
-                setTimeout(() => {
-                    const newRandomList = getRandomList<IVerb>(prevList, verbs.regular, 10)
-                    const newCardList = getShuffleList(newRandomList)
-                    setPrevList([
-                        ...randomList,
-                        ...newRandomList
-                    ])
-                    setRandomList(newRandomList)
-                    setCardList(newCardList)
-                }, 1500)
-            }
+            timer = setTimeout(() => {
+                alert('Congratulations, you got everyone right!')
+                const response = confirm('Do you want to play again?')
+                if (response) {
+                    setTimeout(() => {
+                        const newRandomList = getRandomList<IVerb>(prevList, verbs.regular, 6)
+                        const newCardList = getShuffleList(newRandomList)
+                        const newPreviousList = [...prevList, ...randomList]
+                        setPrevList(newPreviousList)
+                        localStorage.setItem('prevList', JSON.stringify(newPreviousList))
+                        setRandomList(newRandomList)
+                        setCardList(newCardList)
+                    }, 1500)
+                }
+            }, 2000)
         }
+        return () => clearTimeout(timer)
     }, [isSuccess])
 
     useEffect(() => {
-        const shuffleList = getShuffleList(randomList)
+        let initialRandomList: IVerb[] = []
+        if (!prevList.length || !randomList.length) {
+            const initialPrevList = JSON.parse(localStorage.getItem('prevList') ?? '[]')
+            initialRandomList = getRandomList<IVerb>(initialPrevList, verbs.regular, 6)
+            setPrevList(initialPrevList)
+            setRandomList(initialRandomList)
+        }
+        const shuffleList = getShuffleList(initialRandomList)
         setCardList(shuffleList)
     }, [currentOption])
 
     return (
         <div>
-            <small className='pl-1 text-[9px] text-gray-500 font-bold'>Palabras dominadas: {prevList.length / 2} de {verbs.regular.length}</small>
+            <small className='pl-1 text-[9px] text-gray-500 font-bold'>Palabras dominadas: {prevList.length} de {verbs.regular.length}</small>
             <div className='flex justify-between mb-3'>
                 <select name="first" onChange={onChangeSelected} value={currentOption.first}>
                     {options.map((opt) => {
@@ -100,9 +110,22 @@ function Cards() {
                     })}
                 </select>
             </div>
-            <section className="grid grid-cols-4 gap-1.5">
-                {cardList.map((item, index) => {
-                    if (item.type === 'image') {
+            {cardList.length ? (
+                <section className="grid grid-cols-3 sm:grid-cols-4 gap-1">
+                    {cardList.map((item, index) => {
+                        if (item.type === 'image') {
+                            return (
+                                <Flipper
+                                    key={index}
+                                    isActive={item.isFlipped}
+                                    isFreeze={item.isFreeze}
+                                    onChange={() => onChangeItem(index)}
+                                    setActive={(value) => setActive(index, value)}
+                                >
+                                    <img src={item.image} alt={item.baseForm} className="h-full object-cover" />
+                                </Flipper>
+                            )
+                        }
                         return (
                             <Flipper
                                 key={index}
@@ -111,23 +134,16 @@ function Cards() {
                                 onChange={() => onChangeItem(index)}
                                 setActive={(value) => setActive(index, value)}
                             >
-                                <img src={item.image} alt={item.baseForm} className="h-full object-cover" />
+                                <p className="font-bold text-2xl text-white">{item[item.type]}</p>
                             </Flipper>
                         )
-                    }
-                    return (
-                        <Flipper
-                            key={index}
-                            isActive={item.isFlipped}
-                            isFreeze={item.isFreeze}
-                            onChange={() => onChangeItem(index)}
-                            setActive={(value) => setActive(index, value)}
-                        >
-                            <p className="font-bold text-2xl text-white">{item[item.type]}</p>
-                        </Flipper>
-                    )
-                })}
-            </section>
+                    })}
+                </section>
+            ) : (
+                <div className='loader text-center font-bold'>
+                    <p>Ups! se terminaron las palabras! 😢</p>
+                </div>
+            )}
         </div>
     )
 }

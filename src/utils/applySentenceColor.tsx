@@ -18,15 +18,12 @@ export const generateRandomElement = (items: any[]) => {
 
 
 export const getRandomList = <T = any>(prevList: any[], list: any[], size: number) => {
-    const elements = Array.from({ length: size }).map(() => getRandomElement(prevList, list, size))
+    const elements = Array.from({ length: size }).map(() => getRandomElement(prevList, list))
     return elements as T[]
 }
 
-export const getRandomElement = <T = any>(prevList: T[], list: T[], size: number): T => {
-    console.log(prevList)
-    const item = generateRandomElement(list)
-    if (!prevList.includes(item)) {
-        return item
-    }
-    return getRandomElement(prevList, list, size)
+export const getRandomElement = <T = any>(prevList: T[], list: T[]): T => {
+    const updatedList = list.filter((item) => !prevList.includes(item))
+    const item = generateRandomElement(updatedList)
+    return item
 }

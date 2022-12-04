@@ -8,7 +8,7 @@ export function Layout({ children, type }: { children: JSX.Element, type?: Layou
             return (
                 <>
                     <Navbar />
-                    <Wrapper className='flex sm:my-4'>
+                    <Wrapper className='flex py-0 sm:my-4'>
                         <SideBar />
                         <div className='flex-1'>
                             {children}
